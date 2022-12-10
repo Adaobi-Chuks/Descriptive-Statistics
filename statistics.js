@@ -1,5 +1,6 @@
 class Statistics {
 
+    //Measures of Central Tendency
     static mean(values) {
         const n = values.length;
         let sum = 0;
@@ -40,6 +41,7 @@ class Statistics {
         return highestValue;
     }
 
+    //Measures of Dispersion
     static range(values) {
         const sortedValues = values.sort((a, b) => a-b);
         return (sortedValues[sortedValues.length - 1] - sortedValues[0]);
@@ -80,13 +82,3 @@ class Statistics {
     }
 
 }
-
-const values = [20,35,25,12,10,23,18,14,30,40];
-console.log(Statistics.mean(values));
-console.log(Statistics.median(values));
-console.log(Statistics.mode(values));
-console.log(Statistics.range(values));
-console.log(Statistics.variance(values));
-console.log(Statistics.standardDeviation(values));
-console.log(Statistics.absoluteDeviation(values));
-console.log(Statistics.quartileDeviation(values));
